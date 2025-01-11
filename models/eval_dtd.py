@@ -109,6 +109,7 @@ class TamperDataset(Dataset):
 
 test_data = TamperDataset(args.data_root+args.lmdb_name,False,minq=args.minq)
 
+print(test_data)
 
 def get_logger(filename, verbosity=1, name=None):
     level_dict = {0: logging.DEBUG, 1: logging.INFO, 2: logging.WARNING}
