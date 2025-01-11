@@ -113,6 +113,7 @@ class TamperDataset(Dataset):
                 print("RGB", res['rgb'])
                 print("q", res['q'])
                 print("i", res['i'])
+                check_print = true
             return res
 
 
