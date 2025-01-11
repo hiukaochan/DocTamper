@@ -59,7 +59,7 @@ class TamperDataset(Dataset):
         self.vflip = torchvision.transforms.RandomVerticalFlip(p=1.0)
         self.totsr = ToTensorV2()
         self.toctsr =torchvision.transforms.Compose([torchvision.transforms.ToTensor(),torchvision.transforms.Normalize(mean=(0.485, 0.455, 0.406), std=(0.229, 0.224, 0.225))])
-        self.check_print = false
+        self.check_print = False
 
     def __len__(self):
         return self.max_nums
@@ -113,7 +113,7 @@ class TamperDataset(Dataset):
                 print("RGB", res['rgb'])
                 print("q", res['q'])
                 print("i", res['i'])
-                check_print = true
+                check_print = True
             return res
 
 
