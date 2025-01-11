@@ -108,7 +108,7 @@ class TamperDataset(Dataset):
                 'i':q
             }
             if (self.check_print == False): 
-                print(res['img'].shape, res['img'])
+                print(res['image'].shape, res['image'])
                 print("Label", res['label'])
                 print("RGB", res['rgb'])
                 print("q", res['q'])
