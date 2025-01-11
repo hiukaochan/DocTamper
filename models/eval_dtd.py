@@ -95,15 +95,10 @@ class TamperDataset(Dataset):
                     im.save(tmp,"JPEG",quality=q1)
                     im = Image.open(tmp)
                 im.save(tmp,"JPEG",quality=q)
-                # jpg = jpegio.read(tmp.name)
-                # dct = jpg.coef_arrays[0].copy()
-                # im = im.convert('RGB')
-                im = Image.open(tmp.name)
-                im_array = np.array(im)
-
-                # Approximate coefficients from pixel data
-                dct = cv2.dct(im_array.astype(np.float32) / 255.0)
-
+                jpg = jpegio.read(tmp.name)
+                dct = jpg.coef_arrays[0].copy()
+                im = im.convert('RGB')
+                
             res =  {
                 'image': self.toctsr(im),
                 'label': mask.long(),
